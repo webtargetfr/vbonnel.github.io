@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Refactoring Ubity web portal UI</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Design system</span>
+            </h3>
+            <h1>Refactoring Ubity web portal UI</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Company</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Duration</h4>
+                    <p>8 months</p>
+                </div>
+                <div class="box">
+                    <h4>Year</h4>
+                    <p>2019</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <img id="zoom-margin" src="assets/img/cs3/hero_cs3.jpg" class="medium-zoom-image cs_shadow" alt="Design system overview">
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>The brief</h2>
+                <p>Ubity is a company providing telephony solutions to small and medium-sized enterprises and currently one of the top 10
+                players in Canada. Since the creation of the company in 2007, Ubity offers a self-service web portal called Studio to
+                help clients manage their phone system.</p>
+                <p>However, for over 10 years, several developers and designers succeeded each other working on Studio, all with their way
+                of coding and designing. User interface inconsistencies became more and more apparent to the end-users and a lot of
+                frustrations began to emerge, leading to friction within our team. We needed to address these issues and become more
+                efficient in the way we were building our front-end user interface.</p>
+                <div class="alert alert-warning announcement-brief"><p>In July 2019, Ubity has been acquired by Telus, one of the three largest telecom providers in Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>My role</h3>
+                <ul>
+                    <li>Co-initiator of the refactoring</li>
+                    <li>User interface design (UI)</li>
+                </ul>
+                <h3 class="mt-4">Team</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Cédric Thivolle (Developer)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Research</h2>
+            <h3>Planning the refactoring</h3>
+            <p>Large companies often have dedicated teams working on the refactoring of their interfaces. Being one half of a two-man
+            team working part-time on this project, our first task was to create an action plan that we could realistically achieve.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs3/action_plan.jpg" class="medium-zoom-image lazyload" alt="Design system action plan">
+            <figcaption>To successfully tackle this refactoring, we needed to break it down into smaller tasks</figcaption>
+        </figure>
+        <section>
+            <h3>UI assessment</h3>
+            <p>Putting the plan into action, I started to make an inventory of the various layouts and UI components used across the
+            interface. The goal was to find recurring patterns of components we could reuse as well as spot major layout
+            inconsistencies.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs3/graphic_inconsistencies.jpg" class="medium-zoom-image lazyload" alt="Graphic inconsistencies">
+            <figcaption>Many different graphic styles could be found in the interface...</figcaption>
+        </figure>
+        <section class="pb-0">
+            <figure>
+                <img id="zoom-margin" data-src="assets/img/cs3/modal_inconsistencies.jpg" class="medium-zoom-image lazyload" alt="Modal inconsistencies">
+                <figcaption>...as well as variations in components. It showed that generations of developers succeeded each other without having
+                unified design guidelines</figcaption>
+            </figure>
+        </section>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Challenges</h2>
+                <p><strong>1. Convince the management:</strong> we needed to showcase the benefits this project would bring the team while guaranteeing that we could tackle it alongside other projects planned in the roadmap.</p>
+                <p><strong>2. Develop a white-label ready interface:</strong> several Ubity business partners were using the web portal as a white-label platform. Our solution needed to be easily customizable and maintainable.</p>
+                <p><strong>3. Develop best practices:</strong> this project could only be successful if widely used by the development team. How
+                could we make sure designers and developers would adopt our guidelines and contribute to it?</p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <h3>A framework-based redesign</h3>
+            <p>Upon completion of the initial UI assessment, rather than recreate our interface from scratch, we decided to use
+            Bootstrap, a popular front-end framework, as the basis of our new UI.</p>
+            <p>Each component found in the existing interface was refactored according to Bootstrap and our design guidelines. The
+            video below is an extract of the documentation presenting the refactoring of 70+ modals windows.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs3/modal_refactoring.webm">
+            <source src="../assets/vid/cs3/modal_refactoring.mp4">
+        </video>
+        <section>
+            <p>Once refactored, each component of the new UI was then meticulously cataloged in an inventory.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs3/modal_inventory.mp4">
+        </video>
+        <section>
+            <p>We also rebuilt our main page layout so it would incorporate all the UI elements we needed for our interface.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs3/page_layout.jpg" class="medium-zoom-image lazyload" alt="Page layout before after">
+        </figure>
+        <section>
+            <h3>A white-label ready interface</h3>
+            <p>Our new interface was also developed to be quickly customized to match the branding of white label partners.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs3/white_label.jpg" class="medium-zoom-image lazyload"
+                alt="White label examples">
+        </figure>
+        <section>
+            <h3>Evangelizing the design system</h3>
+            <p>Once the new design system was validated by the team, we wanted to make sure other developers and designers would use it
+            regularly. As a result, we made these guidelines accessible by building a documentation website and a user interface
+            library.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs3/doc_website.jpg" class="medium-zoom-image lazyload" alt="Documentation website">
+        </figure>
+        <figcaption>Our documentation website (ui-docs-mtl.ubity.com) is publicly accessible</figcaption>
+        <section>
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs3/design_system.webm">
+                <source src="../assets/vid/cs3/design_system.mp4">
+            </video>
+            <figcaption>Our user interface library (UI Kit) is accessible in Figma, our design tool</figcaption>
+        </section>
+        <section class="pt-0 border-bottom">
+            <h3>Adopting best practices</h3>
+            <p>Finally, to limit further inconsistencies, we introduced a methodology where any new UI elements not documented
+            in our library would have to be reviewed by the team before being implemented.</p>
+            <p>This approach greatly improved the consistency of our interface (<a href="https://gph.is/1bY37z2" target="_blank">and our sanity</a>).</p>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Since the beginning of the implementation, our new design system has been a <strong>complete success and one of the works I'm
+                the proudest of</strong>. Besides bringing consistency across the whole interface, the benefits it brought were manifold:</p>
+            <ul class="cs-desc mx-auto mb-0">
+                <li>This project helped shift the developer/designer conversation away from minor cosmetics inconsistencies to
+                concentrate on the most important one: improving the overall user experience.</li>
+                <li>Our documentation website helped developers ship new features faster as we greatly reduced the time spent on code review.</li>
+                <li>The design library greatly improved how quickly we could design and iterate ideas.</li>
+            </ul>
+            <div class="alert alert-warning mt-7">
+                <h3>Lessons learned</h3>
+                <ul>
+                    <li class="mb-3">One mistake we initially made was to let our development team use Bootstrap without creating design guidelines. Lots of inconsistency started to emerge as choosing a framework does not mean having a design system in place!
+                    </li>
+                    <li class="mb-0">Frequent collaboration between designers and developers is the most crucial part behind creating a truly functional design language. It is also a unique opportunity as a team to strengthen bonds between employees.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">View more case studies</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

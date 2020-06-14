@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Redesign du centre d'appel Ubity</title>
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="../scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views_fr/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="../js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Développement de fonctionnalités</span>
+            </h3>
+            <h1>Redesign du centre d'appel Ubity</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Entreprise</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Durée</h4>
+                    <p>12 mois</p>
+                </div>
+                <div class="box">
+                    <h4>Année</h4>
+                    <p>2018</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <img id="zoom-margin" src="../assets/img/cs1/fr/hero_cs1_fr.jpg" class="medium-zoom-image" alt="Vues du centre d'appel">
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>Le brief</h2>
+                <p>Ubity est une entreprise qui fournit des solutions de téléphonie aux petites et moyennes entreprises et qui figure
+                actuellement parmi les dix premiers opérateurs au Canada.</p>
+                <p>L’une des solutions qu’Ubity offre à ses clients est une fonctionnalité de centre d’appel. Élément essentiel de l’offre
+                proposée par Ubity, elle est utilisée quotidiennement par des centaines d’entreprises et leurs équipes pour améliorer
+                l’expérience utilisateur de leurs clients. L’étude de cas suivante présente mon rôle dans la refonte de l’outil.</p>
+                <div class="alert alert-warning announcement-brief"><p>En juillet 2019, Ubity a été acquis par Telus, l’un des trois plus grands fournisseurs de télécommunications au Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>Mon rôle</h3>
+                <ul>
+                    <li>Recherche utilisateur</li>
+                    <li>Design d'expérience utilisateur (UX)</li>
+                    <li>Design d'interface (UI)</li>
+                </ul>
+                <h3 class="mt-4">Équipe</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Jean Schurger (Développeur lead)</li>
+                    <li>Cédric Thivolle (Développeur)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Recherche</h2>
+            <h3>Définir les personas</h3>
+            <p>Pour aborder cette refonte, j’ai d’abord représenté la structure opérationnelle de notre client cible : un centre
+            d’appel de petite à moyenne taille comprenant 25 à 100 agents.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs1/fr/team_structure_fr.jpg" class="medium-zoom-image lazyload" alt="Structure d'équipe">
+            <figcaption>Un centre d’appel de petite à moyenne taille compte généralement 4 collaborateurs clefs différents (représentés en
+            jaune) et plusieurs départements.</figcaption>
+        </figure>
+        <section>
+            <p>J’ai ensuite étudié les différents personas susceptibles de collaborer au sein du centre d’appel.</p>
+            <p>Sur les 4 personas identifiés lors de mes recherches, <strong>Raj (le superviseur)</strong> et <strong>Mélanie (l’agent
+                du centre d’appel)</strong> sont les principaux utilisateurs, ceux ayant le plus de chances d’être présents chez
+            notre client cible.</p>
+        </section>
+        <div class="image-gallery2">
+            <figure class="cs_shadow">
+                <img id="zoom-margin" data-src="../assets/img/cs1/fr/Persona_3_fr.jpg" class="medium-zoom-image lazyload" alt="Persona 3">        
+            </figure>
+            <figure class="cs_shadow">
+                <img id="zoom-margin" data-src="../assets/img/cs1/fr/Persona_4_fr.jpg" class="medium-zoom-image lazyload" alt="Persona 4">
+            </figure>
+            <figcaption>D’autres personas (tels que Carole ou Martin) n’existent pas toujours, car l’entreprise n’a pas forcément de budget pour
+            ces rôles</figcaption>
+        </div>
+        <section class="pb-0">
+            <div class="alert alert-warning">
+                <p>Pendant cette phase préliminaire, j’ai souvent confronté mes recherches avec nos clients et à notre équipe des ventes pour valider ces hypothèses et m’assurer que nous étions sur la bonne voie.</p>
+            </div>
+        </section>
+        <section>
+            <h3>Évaluation du produit existant</h3>
+            <p>En analysant l’outil de centre d’appel que nous offrions à nos clients, il était clair que celui-ci était limité en
+            termes de fonctionnalités. Il n’y avait, par exemple, aucune possibilité pour un superviseur comme Raj d’avoir une
+            <strong>vue d’ensemble des agents connectés au sein du centre d’appel</strong>. Cela réduisait considérablement sa capacité à gérer celui-ci.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs1/fr/existing_design_fr.jpg" class="medium-zoom-image lazyload" alt="Produit existant">
+            <figcaption>L’outil de centre d’appel avant le redesign était <a href="https://gph.is/2E75Qg6" target="_blank" rel="noreferrer">très
+                basique</a>: une simple liste affichait quelques statistiques pour chaque file d’appels.</figcaption>
+        </figure>
+        <section>
+            <h3>Analyse de la concurrence</h3>
+            <p>L’étude de la concurrence a été une partie essentielle de notre processus de redesign pour nous aider à déterminer
+            l’ampleur et les efforts nécessaires pour mener à bien ce projet.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs1/gartner_2880.jpg" class="medium-zoom-image lazyload" alt="Rapport Gartner">
+            <figcaption>Le rapport annuel de la société Gartner sur l’industrie nous a fourni des informations utiles sur les concurrents ainsi
+            que les tendances et fonctionnalités importantes que le marché demandait pour un centre d'appel</figcaption>
+        </figure>
+        <section class="pb-0">
+            <p>En termes de solutions concrètes, nos efforts se sont concentrés sur la conception d’outils pour aider nos deux personas
+            principaux : Raj et Mélanie.</p>
+        </section>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Défi</h2>
+                <p>Comment <strong>donner à Raj de meilleurs outils pour contrôler son équipe</strong> et l’aider à améliorer les performances
+                globales de son centre d’appel ?</p>
+                <p>Comment <strong>aider Mélanie à visualiser ses performances</strong> par rapport à celles de son équipe ?</p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <p>Pour aider ces deux personas, nous avons décidé de construire 3 vues supplémentaires :</p>
+            <h3 class="mt-5">1. La vue « Agent »</h3>
+            <p>Raj sera désormais en mesure de surveiller en temps réel le statut de tous les agents du centre d’appel. Cette vue l’aidera à ajuster au besoin leur charge de travail.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/agents_online.webm">
+            <source src="../assets/vid/cs1/agents_online.mp4">
+        </video>
+        <section>
+            <h3>2. La vue « Tableau de bord d’agent »</h3>
+            <p>Raj et Mélanie pourront désormais comparer les performances de Mélanie avec celles du reste de son équipe. Raj pourra
+            ainsi évaluer la productivité de Mélanie et celle-ci sera en mesure de demander une meilleure compensation en fonction
+            de ses performances.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/agents_dashboard.webm">
+            <source src="../assets/vid/cs1/agents_dashboard.mp4">
+        </video>
+        <section>
+            <h3>3. La vue « Tableau de bord »</h3>
+            <p>Conçue pour être affichée au mur du centre d’appels, cette vue consolidée aidera Raj et Mélanie à surveiller en temps
+            réel les statistiques les plus importantes du centre d’appels.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs1/in_context_2880.jpg" class="medium-zoom-image lazyload" alt="Tableau de bord en contexte">
+        </figure>
+        <section>
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs1/configurable_stats.webm">
+                <source src="../assets/vid/cs1/configurable_stats.mp4">
+            </video>
+            <figcaption>L’outil a été conçu pour être facilement configurable afin que Raj puisse montrer à son équipe uniquement les
+            indicateurs qu’il juge importants</figcaption>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/alerts.webm">
+            <source src="../assets/vid/cs1/alerts.mp4">
+        </video>
+        <figcaption>Raj peut désormais gérer en quelques clics les seuils d’alerte de l’ensemble du centre d’appel. Ces alertes sont
+        essentielles pour informer Raj et Mélanie lorsqu’un problème survient.</figcaption>
+        <section class="border-bottom">
+            <figure>
+                <img id="zoom-margin" data-src="../assets/img/cs1/in_context_room_2880.jpg" class="medium-zoom-image lazyload" alt="Tableau de bord dans un centre d'appel">
+            </figure>
+            <figcaption>Une fois déclenchées, les alertes sont clairement visibles dans le centre d’appel</figcaption>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>En quelques mois seulement et en maintenant un contact régulier avec nos clients, nous avons pu <strong>considérablement
+                améliorer la solution de centre d’appel qu’Ubity proposait à ses clients</strong>.</p>
+            <p>Le centre d’appel est désormais <strong>l’un des outils les plus lucratifs de l’offre Ubity</strong> et une grande partie de notre
+            calendrier produit est orientée vers son amélioration.</p>
+            <p>En plus de la voix, notre prochain défi sera d’apporter au centre d’appels des capacités textuelles (chat en direct,
+            SMS, médias sociaux) pour offrir à nos clients une véritable expérience de centre de contact multicanal.</p>
+            <div class="alert alert-warning mt-7">
+                <h3>Leçon à retenir</h3>
+                <p>En tant que petite entreprise faisant face à des concurrents disposant de millions de dollars de financement, nous avons
+                dû faire preuve de pragmatisme en créant des fonctionnalités que nous pouvions aborder de manière réaliste. Souvent
+                frustrant, cela nous a néanmoins permis d’être plus efficaces et de nous concentrer sur l’essentiel.</p>
+            </div>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">Voir plus de projets</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

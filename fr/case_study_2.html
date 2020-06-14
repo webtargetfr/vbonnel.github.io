@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Redesign de l'outil de conférence</title>
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="../scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views_fr/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="../js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Développement de fonctionnalités</span>
+            </h3>
+            <h1>Redesign de l'outil de conférence</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Entreprise</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Durée</h4>
+                    <p>6 mois</p>
+                </div>
+                <div class="box">
+                    <h4>Année</h4>
+                    <p>2017</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <img id="zoom-margin" src="../assets/img/cs2/hero_cs2.jpg" class="medium-zoom-image" alt="Widget de conférence active">
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>Le brief</h2>
+                <p>Ubity est une entreprise qui fournit des solutions de téléphonie aux petites et moyennes entreprises et qui figure
+                actuellement parmi les dix premiers opérateurs au Canada.</p>
+                <p>L’un des outils les plus populaires qu’Ubity offre à ses clients est la possibilité de créer des conférences audio.
+                Pourtant, depuis la création de l’entreprise en 2007, aucune mise à jour du produit n’avait été faite. Ma tâche
+                consistait donc à repenser cette fonctionnalité.</p>
+                <div class="alert alert-warning announcement-brief"><p>En juillet 2019, Ubity a été acquis par Telus, l’un des trois plus grands fournisseurs de télécommunications au Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>Mon rôle</h3>
+                <ul>
+                    <li>Design d'expérience utilisateur (UX)</li>
+                    <li>Design d'interface (UI)</li>
+                </ul>
+                <h3 class="mt-4">Équipe</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Jean Schurger (Développeur lead)</li>
+                    <li>Elton Tasca Borssoi (Développeur)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Recherche</h2>
+            <h3>Cartographier le parcours de l’utilisateur</h3>
+            <p>Pour aborder cette refonte, j’ai commencé par cartographier le parcours que les utilisateurs peuvent effectuer avant,
+            pendant et après une conférence audio. Cela m’a permis de mettre en évidence les étapes critiques de leur parcours et
+            d’identifier leurs points de souffrance.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs2/fr/user_journey_fr.png" class="medium-zoom-image lazyload cs_shadow" alt="Parcours de Sarah">
+        </figure>
+        <section>
+            <h3>Évaluation du produit existant</h3>
+            <p>L’outil existant que nous offrions à nos clients était une simple liste présentant les conférences audio des clients.</p>
+            <p>Cette vue présentait de nombreux problèmes d'ergonomie : parmi ceux-ci, le fait que les conférences téléphoniques qui
+            n’avaient pas encore commencé étaient présentées à côté de celles qui venaient de se terminer rendait confus de nombreux
+            utilisateurs qui avaient besoin d’une formation supplémentaire pour utiliser l’outil.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs2/existing_design.jpg" class="medium-zoom-image lazyload" alt="Produit existant">
+            <figcaption>Le produit existant (<a href="https://gph.is/1kA5eNi" target="_blank" rel="noreferrer">soupir</a>) avant la refonte.
+            Seriez-vous capable de dire quelle conférence téléphonique est sur le point de commencer ?</figcaption>
+        </figure>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Défi</h2>
+                <p>Étant l’une des fonctionnalités les plus utilisées, notre défi pour cette refonte était de <strong>rendre ce produit aussi
+                    simple à utiliser que possible</strong>. Pouvions-nous aider les utilisateurs à créer une conférence téléphonique en moins de 30 secondes ?</p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <p>Pour présenter la solution finale, suivons les différentes étapes par lesquelles passent les utilisateurs lorsqu’ils
+            créent et participent à une conférence téléphonique.</p>
+            <h3 class="mt-5">1. Création d’une conférence</h3>
+            <p>Comme indiqué dans notre défi, nous souhaitions que nos utilisateurs puissent créer une conférence en quelques clics et
+            moins de 30 secondes. Pour ce faire, j’ai proposé de limiter à trois écrans l’étape de création d’une conférence.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_creation.webm">
+            <source src="../assets/vid/cs2/conference_creation.mp4">
+        </video>
+        <section>
+            <p>Dès qu’une conférence est créée, chaque participant reçoit un courriel expliquant en détail comment rejoindre celle-ci.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs2/fr/email_invitation_fr.jpg" class="medium-zoom-image lazyload" alt="Example de courriel d'invitation">
+            <figcaption>Si une conférence est retardée ou annulée, un courriel mis à jour est envoyé pour notifier les participants</figcaption>
+        </figure>
+        <section>
+            <h3>2. Pendant la conférence</h3>
+            <p>Une fois la conférence démarrée, nous avons donné aux administrateurs la possibilité de la gérer grâce à un widget de conférence très simple à utiliser.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_widget.webm">
+            <source src="../assets/vid/cs2/conference_widget.mp4">
+        </video>
+        <section>
+            <p>Les administrateurs de la conférence disposent désormais de tous les outils nécessaires pour gérer leurs réunions : ils
+            peuvent inviter des participants supplémentaires ou modérer la conférence en mettant en sourdine et en excluant des
+            participants.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs2/fr/widgets_fr.jpg" class="medium-zoom-image lazyload" alt="Widget pendant une conférence">
+        </figure>
+        <section>
+            <h3>3. Après la conférence</h3>
+            <p>Dès que la conférence se termine, un rapport avec l’enregistrement audio de la conférence téléphonique est envoyé aux participants.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_reports.webm">
+            <source src="../assets/vid/cs2/conference_reports.mp4">
+        </video>
+        <section class="pb-0">
+            <p>À tout moment, les utilisateurs peuvent retrouver une conférence passée en utilisant une section « Conférences terminées ».</p>
+        </section>
+        <section class="border-bottom">
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs2/conference_ended.webm">
+                <source src="../assets/vid/cs2/conference_ended.mp4">
+            </video>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Près de deux ans après la refonte, l’outil de conférence Ubity est toujours <strong>l’une des fonctionnalités les plus populaires de notre plateforme</strong> et de nombreux clients (tels que des cabinets d’avocats) l’utilisent quotidiennement pour gérer leurs réunions.</p>
+            <p>Le défi de ce projet était de <strong>donner à nos utilisateurs l’ensemble des outils dont ils avaient besoin pour gérer des situations d’urgence qui pouvaient survenir lors de la création ou de la gestion des conférences :</strong></p>
+            <ul class="cs-desc mx-auto mb-0">
+                <li>Créer une conférence en quelques secondes.</li>
+                <li>Informer les participants lorsqu’une conférence a été repoussée/annulée.</li>
+                <li>Partager les détails d’accès à la conférence avec les participants qui ont perdu les leurs.</li>
+                <li>Inviter un nouveau participant une fois une conférence démarrée.</li>
+            </ul>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">Voir plus de projets</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Ubity call center redesign</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Feature development</span>
+            </h3>
+            <h1>Ubity call center redesign</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Company</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Duration</h4>
+                    <p>12 months</p>
+                </div>
+                <div class="box">
+                    <h4>Year</h4>
+                    <p>2018</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <!-- https://www.responsivebreakpoints.com/ + img optim -->
+            <img
+            id="zoom-margin"
+            sizes="
+            (max-width: 576px) 100vw,
+            (max-width: 768px) 100vw,
+            (max-width: 992px) 100vw,
+            2880px"
+
+            data-srcset="
+            assets/img/cs1/hero_cs1_en_576.jpg 576w,
+            assets/img/cs1/hero_cs1_en_1961.jpg 1961w,
+            assets/img/cs1/hero_cs1_en_2880.jpg 2880w" 
+            data-src="assets/img/cs1/hero_cs1_en_2880.jpg" 
+
+            class="lazyload medium-zoom-image" 
+            id="zoom-margin"
+            alt="Call center views"/>
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>The brief</h2>
+                <p>Ubity is a company providing telephony solutions to small and medium-sized enterprises and currently one of the top 10
+                players in Canada.</p>
+                <p>One of the solutions Ubity offers his clients is a call center functionality. It is an essential part of Ubity offering
+                and is used daily by hundreds of companies and their teams to improve the user experience of their customers. The
+                following case study presents my role in leading the redesign of the tool.</p>
+                <div class="alert alert-warning announcement-brief"><p>In July 2019, Ubity has been acquired by Telus, one of the three largest telecom providers in Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>My role</h3>
+                <ul>
+                    <li>User research</li>
+                    <li>User experience design (UX)</li>
+                    <li>User interface design (UI)</li>
+                </ul>
+                <h3 class="mt-4">Team</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Jean Schurger (Lead developer)</li>
+                    <li>Cédric Thivolle (Developer)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Research</h2>
+            <h3>Building the personas</h3>
+            <p>To approach this redesign, I needed to first represent the operational team structure of our targeted customer: a small to medium-sized call center comprised of 25 to 100 agents.</p>
+        </section>
+        <figure>            
+            <!-- https://www.responsivebreakpoints.com/ + img optim -->
+            <img
+            id="zoom-margin"
+            sizes="
+            (max-width: 576px) 100vw,
+            (max-width: 768px) 100vw,
+            (max-width: 992px) 100vw,
+            2880px"
+
+            data-srcset="
+            assets/img/cs1/team_structure_en_576.jpg 576w,
+            assets/img/cs1/team_structure_en_1961.jpg 1961w,
+            assets/img/cs1/team_structure_en_2880.jpg 2880w" 
+            data-src="assets/img/cs1/team_structure_en_2880.jpg" 
+
+            class="lazyload medium-zoom-image" 
+            id="zoom-margin"
+            alt="Team structure"/>
+            <figcaption>4 different personas (represented in yellow) can usually be found in a small call center. A typical call center will
+            have several departments: customer service, sales department, billing department, etc...</figcaption>
+        </figure>
+        <section>
+            <p>Diving into the team structure, I represented in detail the several personas likely to collaborate within the call
+            center.</p>
+            <p>Out of the 4 personas identified during our research, 2 emerged: <strong>Raj (supervisor)</strong> and <strong>Melanie (call center agent)</strong>. Those were our primary users, the one more likely to be found at our targeted customer.</p>
+        </section>
+        <div class="image-gallery2">
+            <figure class="cs_shadow">
+                <img
+                id="zoom-margin"
+
+                sizes="
+                (max-width: 576px) 100vw,
+                (max-width: 768px) 100vw,
+                (max-width: 992px) 100vw,
+                2880px"
+
+                data-srcset="
+                assets/img/cs1/persona_3_en_576.jpg 576w,
+                assets/img/cs1/persona_3_en_1961.jpg 1961w,
+                assets/img/cs1/persona_3_en_2880.jpg 2880w" 
+                data-src="assets/img/cs1/persona_3_en_2880.jpg" 
+
+                class="lazyload medium-zoom-image" 
+                id="zoom-margin"
+                alt="Persona 3"/>     
+            </figure>
+            <figure class="cs_shadow">
+                <img
+                id="zoom-margin"
+
+                sizes="
+                (max-width: 576px) 100vw,
+                (max-width: 768px) 100vw,
+                (max-width: 992px) 100vw,
+                2880px"
+
+                data-srcset="
+                assets/img/cs1/persona_4_en_576.jpg 576w,
+                assets/img/cs1/persona_4_en_1961.jpg 1961w,
+                assets/img/cs1/persona_4_en_2880.jpg 2880w" 
+                data-src="assets/img/cs1/persona_4_en_2880.jpg" 
+
+                class="lazyload medium-zoom-image" 
+                id="zoom-margin"
+                alt="Persona 4"/>  
+            </figure>
+            <figcaption>Other personas (such as Carole or Martin) might not exist within our targeted customer because the company might simply
+            not have any budget for these roles</figcaption>
+        </div>
+        <section class="pb-0">
+            <div class="alert alert-warning">
+                <p>During this preliminary phase, I often confronted my research with
+                    our clients and the sales team to validate these assumptions and make sure we were on the right
+                    track.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>Evaluating the existing product</h3>
+            <p>Looking at the existing call center tool we were offering our clients, It was evident that it was limited in
+                terms of functionalities: there was no possibility for a supervisor like Raj to have an <strong>overview of each
+                    agent's statuses within the call center</strong>. This greatly reduced his ability to manage the call
+                center.</p>
+        </section>
+        <figure>
+            <img
+            id="zoom-margin"
+
+            sizes="
+            (max-width: 576px) 100vw,
+            (max-width: 768px) 100vw,
+            (max-width: 992px) 100vw,
+            2880px"
+
+            data-srcset="
+            assets/img/cs1/existing_design_en_576.jpg 576w,
+            assets/img/cs1/existing_design_en_1961.jpg 1961w,
+            assets/img/cs1/existing_design_en_2880.jpg 2880w" 
+            data-src="assets/img/cs1/existing_design_en_2880.jpg" 
+
+            class="lazyload medium-zoom-image" 
+            id="zoom-margin"
+            alt="Existing design"/>
+            <figcaption>The existing call center product was <a href="https://gph.is/2E75Qg6" target="_blank" rel="noreferrer">very basic</a>: a
+            simple list view displaying a few statistics about each call queues</figcaption>
+        </figure>
+        <section>
+            <h3>Reviewing competitors</h3>
+            <p>Reviewing existing competitors was a critical part of our process to help us determine the scope and efforts required to
+            complete this project.</p>
+        </section>
+        <figure>
+            <img
+            id="zoom-margin"
+
+            sizes="
+            (max-width: 576px) 100vw,
+            (max-width: 768px) 100vw,
+            (max-width: 992px) 100vw,
+            2880px"
+
+            data-srcset="
+            assets/img/cs1/gartner_576.jpg 576w,
+            assets/img/cs1/gartner_1961.jpg 1961w,
+            assets/img/cs1/gartner_2880.jpg 2880w" 
+            data-src="assets/img/cs1/gartner_2880.jpg" 
+
+            class="lazyload medium-zoom-image" 
+            id="zoom-margin"
+            alt="Gartner report"/>
+            <figcaption>Gartner's yearly industry report provided us actionable insights on important functionalities the market was asking for</figcaption>
+        </figure>
+        <section class="pb-0">
+            <p>Moving towards the solution phase, our efforts would concentrate on building tools to help our 2 primary personas: Raj,
+            the supervisor, and Melanie, the call center agent.</p>
+        </section>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Challenge</h2>
+                <p>How might we <strong>give Raj tools to monitor his team</strong> and help him improve the overall call center performance?</p>
+                <p>How might we <strong>help Melanie visualize her performance</strong> with her team?</p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <p>To help these 2 personas, we decided to build 3 additional views:</p>
+            <h3 class="mt-5">1. The "Agent" view</h3>
+            <p>Raj would now be able to monitor all of the call center agents' statuses in real-time. This view would help him adjust their workload.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/agents_online.webm">
+            <source src="../assets/vid/cs1/agents_online.mp4">
+        </video>
+        <section>
+            <h3>2. The "Agent dashboard" view</h3>
+            <p>Both Raj and Melanie would now be able to review and compare Melanie's performance with the rest of her team. Raj could now assess Melanies' productivity and Melanie could ask for better compensation based on her performance.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/agents_dashboard.webm">
+            <source src="../assets/vid/cs1/agents_dashboard.mp4">
+        </video>
+        <section>
+            <h3>3. The "Live dashboard" view</h3>
+            <p>Designed to be displayed on a wall within the call center, this consolidated view would help both Raj and Melanie to quickly monitor in real-time the most important statistics of the call center.</p>
+        </section>
+        <figure>
+            <img
+            id="zoom-margin"
+
+            sizes="
+            (max-width: 576px) 100vw,
+            (max-width: 768px) 100vw,
+            (max-width: 992px) 100vw,
+            2880px"
+
+            data-srcset="
+            assets/img/cs1/in_context_576.jpg 576w,
+            assets/img/cs1/in_context_1961.jpg 1961w,
+            assets/img/cs1/in_context_2880.jpg 2880w" 
+            data-src="assets/img/cs1/in_context_2880.jpg" 
+
+            class="lazyload medium-zoom-image" 
+            id="zoom-margin"
+            alt="Dashboard in context"/>
+        </figure>
+        <section>
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs1/configurable_stats.webm">
+                <source src="../assets/vid/cs1/configurable_stats.mp4">
+            </video>
+            <figcaption>The tool was designed to be easily configurable so that Raj could show his team only the metrics he considered important</figcaption>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs1/alerts.webm">
+            <source src="../assets/vid/cs1/alerts.mp4">
+        </video>
+        <figcaption>Raj could now manage the alerts threshold of the entire call center in just a few clicks. Those alerts are critical to inform Raj and Melanie as soon as a problem occurs</figcaption>
+        <section class="border-bottom">
+            <figure>
+                <img
+                id="zoom-margin"
+
+                sizes="
+                (max-width: 576px) 100vw,
+                (max-width: 768px) 100vw,
+                (max-width: 992px) 100vw,
+                2880px"
+
+                data-srcset="
+                assets/img/cs1/in_context_room_576.jpg 576w,
+                assets/img/cs1/in_context_room_1961.jpg 1961w,
+                assets/img/cs1/in_context_room_2880.jpg 2880w" 
+                data-src="assets/img/cs1/in_context_room_2880.jpg" 
+
+                class="lazyload medium-zoom-image" 
+                id="zoom-margin"
+                alt="Dashboard within the call center"/>
+            </figure>
+            <figcaption>Once triggered, alerts are clearly visible within the call center</figcaption>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>In just a few months and by maintaining regular contact with our clients, we were able to <strong>greatly improve the call
+                center solution we offered</strong>.</p>
+            <p>The Ubity call center is now <strong>one of the most lucrative features in our offering</strong> and a big part of our product
+            roadmap is now directed towards improving it.</p>
+            <p>In addition to voice, our next challenge will be to bring our call center text capabilities support (live chat, SMS and
+            social media) to create a true multi-channel contact center experience for our customers.</p>
+            <div class="alert alert-warning mt-7">
+                <h3>Lessons learned</h3>
+                <p>Being a small enterprise and looking at competitors with millions in funding, we had to be pragmatic in creating
+                    call
+                    center features that we could realistically tackle. Although frustrating at times, it forced us to be more
+                    efficient and
+                    focus on what truly matters.</p>
+            </div>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">View more case studies</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

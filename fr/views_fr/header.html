@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-white p-3 box-shadow">
+    <div class="container nav_container_home">
+        <a data-scroll class="navbar-brand pt-0 pb-0" href="index.html#home">
+            <img src="../assets/img/logo.svg" width="36" height="36" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" id="toggler"
+            aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto mt-2 mt-md-0 text-center">
+                <li class="nav-item">
+                    <a class="nav-link px-md-3 nav-link-menu" href="index.html#work" data-trigger-button="#toggler">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-md-3 nav-link-menu" href="index.html#about" data-trigger-button="#toggler">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-md-3 nav-link-menu" href="../index.html" data-trigger-button="#toggler">EN</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-md-3 mt-2 mt-md-0">
+                <a data-scroll class="btn cta-menu-smartphone btn-block btn-primary my-2 my-md-0" href="#hello"
+                    role="button" data-trigger-button="#toggler">
+                    <span class="mr-2 sayhello"><img src="../assets/img/icons/raised-hand.png" class="img-icon-mini" alt="Raised hand icon"></span>
+                    Me contacter
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $("body").on("click", "[data-trigger-button]", function () {
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            var $this = $(this),
+                cNavButton = $this.data("trigger-button");
+            $(cNavButton).trigger('click');
+        }
+    });
+</script>

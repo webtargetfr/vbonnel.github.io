@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Refactoring du portail web d'Ubity</title>
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="../scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views_fr/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="../js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Systèmes de design</span>
+            </h3>
+            <h1>Refactoring du portail web d'Ubity</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Entreprise</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Durée</h4>
+                    <p>8 mois</p>
+                </div>
+                <div class="box">
+                    <h4>Année</h4>
+                    <p>2019</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <img id="zoom-margin" src="../assets/img/cs3/hero_cs3.jpg" class="medium-zoom-image cs_shadow" alt="Vue d'ensemble du système de design">
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>Le brief</h2>
+                <p>Ubity est une entreprise qui fournit des solutions de téléphonie aux petites et moyennes entreprises et qui figure
+                actuellement parmi les dix premiers opérateurs au Canada. Depuis la création de l’entreprise en 2007, Ubity offre un
+                portail web, Studio, pour aider ses clients à gérer eux-mêmes leur système téléphonique.</p>
+                <p>Pendant plus de 10 ans, plusieurs générations de développeurs et designers se sont succédé dans la conception de Studio
+                sans posséder de directives de style claires. Sans surprise, de nombreuses incohérences d’interface ont alors petit et
+                petit émergé jusqu’à devenir apparentes aux yeux des utilisateurs, cette situation entraînant des frictions au sein même
+                de notre équipe. Améliorer la façon dont nous construisions notre interface était désormais une nécessité.</p>
+                <div class="alert alert-warning announcement-brief"><p>En juillet 2019, Ubity a été acquis par Telus, l’un des trois plus grands fournisseurs de télécommunications au Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>Mon rôle</h3>
+                <ul>
+                    <li>Coinitiateur du refactoring</li>
+                    <li>Design d'interface (UI)</li>
+                </ul>
+                <h3 class="mt-4">Équipe</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Cédric Thivolle (Développeur)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Recherche</h2>
+            <h3>Planification de la refonte</h3>
+            <p>La plupart des grandes entreprises ont des équipes dédiées travaillant à la refonte de leurs interfaces.
+            Faisant partie d’une équipe de deux personnes travaillant à temps partiel sur ce projet, notre première tâche a été de
+            créer un plan d’action que nous pouvions exécuter de manière réaliste.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs3/fr/action_plan_fr.jpg" class="medium-zoom-image lazyload" alt="Plan d'action du système de design">
+            <figcaption>Pour mener à bien cette refonte, nous avons dû décomposer le projet en de nombreuses tâches plus petites</figcaption>
+        </figure>
+        <section>
+            <h3>Évaluation de l’interface</h3>
+            <p>Pour aborder cette refonte, j’ai commencé par faire l’inventaire des différentes mises en page et composants utilisés
+            dans l’ensemble de l’interface. L’objectif était d'identifier des composants que nous pourrions éventuellement
+            réutiliser et de repérer des
+            incohérences graphiques.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs3/fr/graphic_inconsistencies_fr.jpg" class="medium-zoom-image lazyload" alt="Incohérences graphiques">
+            <figcaption>Des styles très disparate étaient initialement visibles dans l’interface...</figcaption>
+        </figure>
+        <section class="pb-0">
+            <figure>
+                <img id="zoom-margin" data-src="../assets/img/cs3/fr/modal_inconsistencies_fr.jpg" class="medium-zoom-image lazyload" alt="Incohérences dans les boîtes de dialogue">
+                <figcaption>... ainsi que de nombreuses variations dans des composants identiques. Cela témoignait de générations de développeurs et
+                designers s’étant succédé sans posséder de directives de style claires.</figcaption>
+            </figure>
+        </section>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Défis</h2>
+                <p><strong>1. Convaincre l’équipe de direction :</strong> nous devions démontrer les avantages que ce projet apporterait à l’équipe tout en garantissant que nous pourrions l’exécuter en même temps que d’autres projets prévus dans le calendrier produit.</p>
+                <p><strong>2. Développer une interface orientée marque blanche :</strong> plusieurs partenaires d’Ubity utilisaient le portail web comme plateforme de marque blanche. Notre solution devait être facilement personnalisable et maintenable.</p>
+                <p><strong>3. Développer de meilleures pratiques :</strong> ce projet ne pouvait avoir d'impact réel que s’il était largement utilisé par notre équipe de développement. Comment pouvions-nous nous assurer que nos collaborateurs adopteraient et contribueraient à notre directive de style ?</p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <h3>Une refonte basée sur un framework</h3>
+            <p>Une fois l'évaluation de l'interface utilisateur terminée, plutôt que de recréer notre interface à partir de zéro, nous avons décidé d'utiliser Bootstrap, un framework front-end populaire, comme base pour la nouvelle interface.</p>
+            <p>Chaque composant préalablement identifié dans l’interface existante a ensuite été retravaillé en utilisant Bootstrap et nos directives de style. La vidéo présentée ci-dessous est un extrait de la documentation présentant la refonte de plus de 70 boîtes de dialogue.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs3/modal_refactoring.webm">
+            <source src="../assets/vid/cs3/modal_refactoring.mp4">
+        </video>
+        <section>
+            <p>Une fois retravaillé, chaque composant de la nouvelle interface a été répertorié dans un inventaire.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs3/modal_inventory.mp4">
+        </video>
+        <section>
+            <p>Nous avons également recrée la mise en page de notre page principale afin qu’elle intègre tous les éléments d’interface dont nous avions besoin.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs3/fr/page_layout_fr.jpg" class="medium-zoom-image lazyload" alt="Mise en page : avant et après">
+        </figure>
+        <section>
+            <h3>Une interface pensée pour la marque blanche</h3>
+            <p>La nouvelle interface a également été conçue pour être rapidement personnalisable afin de refléter l’image de nos partenaires marque blanche.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs3/white_label.jpg" class="medium-zoom-image lazyload"
+                alt="White label examples">
+        </figure>
+        <section>
+            <h3>Promouvoir la directive de style</h3>
+            <p>Une fois la nouvelle directive de style validé par notre équipe, nous voulions nous assurer que tous les développeurs et designers l’utiliseraient régulièrement. Nous avons donc rendu ces directives accessibles en créant un site web de documentation ainsi qu’une bibliothèque de composants (UI Kit).</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="../assets/img/cs3/doc_website.jpg" class="medium-zoom-image lazyload" alt="Site web de documentation">
+        </figure>
+        <figcaption>Notre site web de documentation (ui-docs-mtl.ubity.com) est accessible au public</figcaption>
+        <section>
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs3/design_system.webm">
+                <source src="../assets/vid/cs3/design_system.mp4">
+            </video>
+            <figcaption>Notre bibliothèque de composants (UI Kit) est accessible dans Figma, notre outil de design d'interface</figcaption>
+        </section>
+        <section class="pt-0 border-bottom">
+            <h3>Adopter les meilleures pratiques</h3>
+            <p>Enfin, pour limiter les incohérences qui pourraient survenir par la suite, nous avons introduit une méthodologie où tout nouvel élément d’interface non documenté serait évalué par notre équipe avant de pouvoir être intégré dans notre bibliothèque de composants.</p>
+            <p>Cette approche a grandement amélioré la cohérence générale de notre interface (<a href="https://gph.is/1bY37z2" target="_blank" rel="noreferrer">et notre santé mentale</a>).</p>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Depuis le début de sa mise en œuvre, notre directive de style <strong>a été un succès et l’un des projets dont je suis le plus fier</strong>. Outre la cohérence de l’ensemble de l’interface, les avantages sont multiples :</p>
+            <ul class="cs-desc mx-auto mb-0">
+                <li>Ce projet a permis de faire évoluer les conversations entre designers et développeurs d’une discussion centrée sur
+                    l’aspect cosmétique pour se concentrer sur l’amélioration de l’expérience utilisateur.</li>
+                <li>Notre site de documentation a aidé les développeurs à livrer de nouvelles fonctionnalités plus rapidement, car le temps
+                passé à la révision du code a été considérablement réduit.</li>
+                <li>La bibliothèque de composants (UI Kit) a grandement amélioré notre processus de design et la rapidité avec laquelle nous
+                testons nos idées.</li>
+            </ul>
+            <div class="alert alert-warning mt-7">
+                <h3>Leçon à retenir</h3>
+                <ul>
+                    <li class="mb-3">Une erreur que nous avons commise au départ a été de laisser notre équipe de développement utiliser Bootstrap sans créer de directives. De nombreuses incohérences ont commencé à apparaître à nouveau, car choisir un framework ne signifie pas avoir une directive de style claire !
+                    </li>
+                    <li class="mb-0">Une collaboration fréquente entre designers et développeurs est la partie la plus cruciale dans la création d’un système de design fonctionnel. C’est aussi une occasion unique pour renforcer les liens entre les employés de l’entreprise.
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">Voir plus de projets</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

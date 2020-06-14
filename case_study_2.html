@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Victor Bruzeau">
+    <title>Ubity conference tool redesign</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    
+    <!-- Core CSS -->
+    <link href="scss/custom.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+    
+    <!-- Include header & footer -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+
+    <!-- Scroll reveal / https://scrollrevealjs.org/ -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <!-- Medium Zoom -->
+    <script src="js/medium_zoom.js" defer></script>
+
+    <!-- Smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17544091-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-17544091-1');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KHHPZXB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="home">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHHPZXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div data-include="header_cs"></div>
+    
+    <div class="container_cs">
+        <!-- Start - Project intro -->
+        <section class="cs_intro">
+            <h3>
+                <span class="btn btn-primary pill-intro">Feature development</span>
+            </h3>
+            <h1>Ubity conference tool redesign</h1>
+            <div class="cs_title_desc">
+                <div class="box">
+                    <h4>Company</h4>
+                    <p>Ubity</p>
+                </div>
+                <div class="box">
+                    <h4>Duration</h4>
+                    <p>6 months</p>
+                </div>
+                <div class="box">
+                    <h4>Year</h4>
+                    <p>2017</p>
+                </div>
+            </div>
+        </section>
+        <figure class="herocs">
+            <img id="zoom-margin" src="assets/img/cs2/hero_cs2.jpg" class="medium-zoom-image" alt="Active conference widget">
+        </figure>
+        <!-- End - Project intro -->
+        <!-- Start - Project description -->
+        <section id="brief" class="cs_brief border-bottom">
+            <div class="brief-desc">
+                <h2>The brief</h2>
+                <p>Ubity is a company providing telephony solutions to small and medium-sized enterprises and currently one of the top 10
+                players in Canada.</p>
+                <p>One of the most popular tool Ubity offers his customers is the ability to create audio conferences. However, since the
+                creation of the company in 2007, no update on this product had been done. My task was to redesign this popular feature.</p>
+                <div class="alert alert-warning announcement-brief"><p>In July 2019, Ubity has been acquired by Telus, one of the three largest telecom providers in Canada.</p></div>
+            </div>
+            <div class="brief-team">
+                <h3>My role</h3>
+                <ul>
+                    <li>User experience design (UX)</li>
+                    <li>User interface design (UI)</li>
+                </ul>
+                <h3 class="mt-4">Team</h3>
+                <ul class="mb-0">
+                    <li>Victor Bruzeau (UX/UI designer)</li>
+                    <li>Jean Schurger (Lead developer)</li>
+                    <li>Elton Tasca Borssoi (Developer)</li>
+                </ul>
+            </div>
+        </section>
+        <!-- End - Project description -->
+        <!-- Start - Project development -->
+        <section>
+            <h2>Research</h2>
+            <h3>Mapping the user journey</h3>
+            <p>To begin this redesign, I started mapping the journey users have to go through before, during and after creating
+            conferences. This helped highlight critical parts of their journey and identify users pain points.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs2/user_journey.png" class="medium-zoom-image lazyload cs_shadow" alt="Sarah journey">
+        </figure>
+        <section>
+            <h3>Evaluating the existing product</h3>
+            <p>The existing tool we were offering our client was a simple list presenting the
+            customers' audio conferences.</p>
+            <p>This view had many UX issues: among them was the fact that conferences that had not yet started would be presented
+            alongside conferences that just ended. This issue was confusing many users who would need additional training on our platform.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs2/existing_design.jpg" class="medium-zoom-image lazyload" alt="Existing design">
+            <figcaption>The existing product (<a href="https://gph.is/1kA5eNi" target="_blank" rel="noreferrer">sigh</a>) before the redesign.
+            Can you tell which conference is about to start?</figcaption>
+        </figure>
+        <section id="challenge" class="pb-0">
+            <div class="alert alert-warning challenge">
+                <h2>Challenge</h2>
+                <p>Being one of the most used feature of Ubity's offering, our challenge for this redesign was to <strong>make this product as
+                    simple to use as possible</strong>. Could we help users create an audio conference <strong>in less than 30 seconds?</strong></p>
+            </div>
+        </section>
+        <section id="solution">
+            <h2>Solution</h2>
+            <p>To present the final solution, let's follow the different steps users go through when participating in an audio conference.</p>
+            <h3 class="mt-5">1. Creating a conference</h3>
+            <p>As stated in our challenge, we wanted our users to be able to create a conference in just a few clicks and in less than 30 seconds. To do so, I decided to limit the conference creation flow to three screens.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_creation.webm">
+            <source src="../assets/vid/cs2/conference_creation.mp4">
+        </video>
+        <section>
+            <p>As soon as a conference is created, each participant receives an email explaining in detail how to join the conference.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs2/email_invitation.png" class="medium-zoom-image lazyload" alt="Email invitation example">
+            <figcaption>If a conference is delayed or cancelled, an updated email will be sent out to conference participants</figcaption>
+        </figure>
+        <section>
+            <h3>2. During the conference</h3>
+            <p>Once a conference started, we gave administrators the ability to manage it through a simple, easy-to-use conference widget.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_widget.webm">
+            <source src="../assets/vid/cs2/conference_widget.mp4">
+        </video>
+        <section>
+            <p>Administrators now have all the tools they need to manage their meetings: they can invite additional participants or
+            moderate the conference by muting and excluding participants.</p>
+        </section>
+        <figure>
+            <img id="zoom-margin" data-src="assets/img/cs2/widgets.jpg" class="medium-zoom-image lazyload" alt="Widget during a conference">
+        </figure>
+        <section>
+            <h3>3. After the conference</h3>
+            <p>As soon as the conference ends, a summary report with the conference call recording attached is sent to participants.</p>
+        </section>
+        <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+            <source src="../assets/vid/cs2/conference_reports.webm">
+            <source src="../assets/vid/cs2/conference_reports.mp4">
+        </video>
+        <section class="pb-0">
+            <p>Additionally, users can retrieve any past conferences in just a few clicks by using a conference history section.</p>
+        </section>
+        <section class="border-bottom">
+            <video autoplay="" loop="" muted="" playsinline="" class="cs_video cs_shadow">
+                <source src="../assets/vid/cs2/conference_ended.webm">
+                <source src="../assets/vid/cs2/conference_ended.mp4">
+            </video>
+        </section>
+        <!-- End - Project development -->
+        <!-- Start - Conclusion -->
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Almost 2 years after the redesign, the Ubity audio conferencing tool is still <strong>one of the most popular feature on our platform</strong> and many clients (such as law firms) use it daily to handle their meetings.</p>
+            <p>The challenge of this project was to <strong>give our users the tools they needed to handle critical situations that could arise when creating or managing conferences:</strong></p>
+            <ul class="cs-desc mx-auto mb-0">
+                <li>Creating a conference on the go in less than 30 seconds.</li>
+                <li>Notify participants when a conference has been postponed/canceled.</li>
+                <li>Share conference information details to participants who lost theirs.</li>
+                <li>Inviting another participant after a conference started.</li>
+            </ul>
+        </section>
+        <div class="text-center">
+            <a class="btn btn-lg btn-primary" href="index.html#work" role="button">View more case studies</a>
+        </div>
+        <!-- End - Conclusion -->
+
+    </div>
+
+    <div data-include="footer"></div>
+
+</body> 
+</html>

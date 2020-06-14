@@ -1,0 +1,92 @@
+<a id="BackToTop" title="Go to top" class="btn btn-primary my-2 back-to-top" href="#" role="button"><i class="fas fa-chevron-up"></i></a>
+<footer>
+    <div class="container-footer">
+        <span>© 2020 Victor Bruzeau</span>
+        <span class="mt-1 mt-sm-0">
+            <a class="ml-sm-4" href="https://twitter.com/vbruzeau" target="_blank"><i class="fab fa-twitter"></i><span>Victor Bruzeau sur Twitter</span></a>
+            <a class="ml-3" href="https://www.linkedin.com/in/victor-bruzeau/" target="_blank"><i class="fab fa-linkedin-in"></i><span>Victor Bruzeau sur Linkedin</span></a>
+            <!-- <a class="ml-3" href="https://dribbble.com/vlbruzeau" target="_blank"><i class="fab fa-dribbble"></i><span>Victor Bruzeau sur Dribbble</span></a> -->
+        </span>
+    </div>
+</footer>
+
+<!-- Lazy loading images -->
+<script src="../js/lazysizes.min.js" async=""></script>
+
+<!-- Progress bar -->
+<script src="../js/progress_bar.js"></script>
+
+<!-- Hide header on scroll -->
+<script>
+    $(function () {
+        var header = $(".navbar-lvl-2");
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 72) {
+                header.addClass("navbar__hidden");
+            }
+            else {
+                header.removeClass("navbar__hidden");
+            }
+        });
+    });
+</script>
+
+<!-- ScrollReveal-->
+<script>
+    ScrollReveal().reveal('.work-sample-gallery-section', { delay: 100 });
+
+    ScrollReveal().reveal('.buttondl', { delay: 100 });
+
+    ScrollReveal().reveal('.card1');
+    ScrollReveal().reveal('.card2', { delay: 200 });
+    ScrollReveal().reveal('.card3', { delay: 400 });
+
+    ScrollReveal().reveal('.faq');
+
+    ScrollReveal().reveal('.messageme', { delay: 100 });
+</script>
+
+<!-- Smooth scroll -->
+<script>
+    // All animations will take exactly 1000ms
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true
+    });
+</script>
+
+<!-- Start - Back to top -->
+<script>
+    //Get the button:
+    mybutton = document.getElementById("BackToTop");
+
+    // When the user scrolls down 750px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
+            mybutton.classList.add("back-to-top-shown");
+        } else {
+            mybutton.classList.remove("back-to-top-shown");
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+<!-- End - Back to top -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<!-- Smooth reveal -->
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
